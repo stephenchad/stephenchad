@@ -1,16 +1,16 @@
-## Hi there 👋
+# StephenChad — Personal Portfolio
 
-<!--
-**stephenchad/stephenchad** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+Portfolio website of **Stephen Chad Ethan**, Senior Software Engineer (Full-Stack Dev).
 
-Here are some ideas to get you started:
+## Stack
+- MongoDB + Mongoose
+- Express.js
+- React + Vite + Tailwind CSS
+- Node.js
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## Structure
+- `client/` — React frontend
+- `server/` — Express API + MongoDB
+
+## Author
+Stephen Chad Ethan — [github.com/stephenchad](https://github.com/stephenchad)
