@@ -4,6 +4,11 @@ import SectionHeading from "../components/ui/SectionHeading.jsx";
 import ProjectCard from "../components/ui/ProjectCard.jsx";
 import BlogCard from "../components/ui/BlogCard.jsx";
 import Spinner from "../components/ui/Spinner.jsx";
+import { ProjectCardSkeleton, BlogCardSkeleton } from "../components/ui/Skeleton.jsx";
+
+import { Helmet } from "react-helmet-async";
+
+import Reveal from "../components/ui/Reveal.jsx";
 
 const skills = [
   "React", "Node.js", "Express", "MongoDB", "TypeScript",
@@ -15,6 +20,14 @@ export default function Home() {
     "/projects?featured=true"
   );
   const { data: blogs, loading: bLoading } = useFetch("/blogs");
+
+  <Helmet>
+  <title>Stephen Chad Ethan — Full-Stack Engineer</title>
+  <meta
+    name="description"
+    content="Portfolio of Stephen Chad Ethan, Senior Software Engineer building full-stack web products with React, Node, and MongoDB."
+  />
+</Helmet>
 
   return (
     <>
@@ -81,13 +94,19 @@ export default function Home() {
           subtitle="A selection of products, tools, and experiments I've built recently."
           center
         />
-
         {pLoading ? (
-          <Spinner label="Loading projects..." />
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {[1, 2, 3].map((i) => (
+              <ProjectCardSkeleton key={i} />
+            ))}
+          </div>
+          // <Spinner label="Loading projects..." />
         ) : projects?.length > 0 ? (
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {projects.slice(0, 3).map((p) => (
-              <ProjectCard key={p._id} project={p} />
+            {projects.slice(0, 3).map((p, i) => (
+              <Reveal key={p._id} delay={i * 0.08}>
+                <ProjectCard key={p._id} project={p} />
+              </Reveal>
             ))}
           </div>
         ) : (

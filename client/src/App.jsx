@@ -17,17 +17,16 @@ import ProjectForm from "./pages/admin/ProjectForm.jsx";
 import AdminBlog from "./pages/admin/AdminBlog.jsx";
 import BlogForm from "./pages/admin/BlogForm.jsx";
 import AdminMessages from "./pages/admin/AdminMessages.jsx";
+import NotFound from "./pages/NotFound.jsx";
 
-const NotFound = () => (
-  <div className="max-w-6xl mx-auto px-4 py-20 text-center">
-    <h1 className="text-5xl font-bold text-slate-900">404</h1>
-    <p className="text-slate-600 mt-2">Page not found.</p>
-  </div>
-);
+import ScrollToTop from "./components/layout/ScrollToTop.jsx";
+
+
 
 export default function App() {
   return (
     <BrowserRouter>
+     <ScrollToTop />
       <Routes>
         {/* Public site */}
         <Route element={<Layout />}>

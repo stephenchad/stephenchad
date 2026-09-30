@@ -5,6 +5,10 @@ import ProjectCard from "../components/ui/ProjectCard.jsx";
 import Spinner from "../components/ui/Spinner.jsx";
 import EmptyState from "../components/ui/EmptyState.jsx";
 
+import { Helmet } from "react-helmet-async";
+
+import { ProjectCardSkeleton } from "../components/ui/Skeleton.jsx";
+
 export default function Projects() {
   const { data: projects, loading, error } = useFetch("/projects");
   const [activeTech, setActiveTech] = useState("All");
@@ -30,6 +34,13 @@ export default function Projects() {
     });
   }, [projects, activeTech, search]);
 
+  <Helmet>
+  <title>Stephen Chad Ethan — Full-Stack Engineer</title>
+  <meta
+    name="description"
+    content="A portfolio of full-stack projects built with React, Node, and MongoDB."
+  />
+</Helmet>
   return (
     <section className="max-w-6xl mx-auto px-4 py-16">
       <SectionHeading

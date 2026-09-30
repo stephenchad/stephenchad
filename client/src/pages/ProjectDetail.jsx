@@ -2,6 +2,8 @@ import { Link, useParams } from "react-router-dom";
 import useFetch from "../hooks/useFetch.js";
 import Spinner from "../components/ui/Spinner.jsx";
 
+import { Helmet } from "react-helmet-async";
+
 export default function ProjectDetail() {
   const { slug } = useParams();
   const { data: project, loading, error } = useFetch(`/projects/slug/${slug}`, [
@@ -22,6 +24,13 @@ export default function ProjectDetail() {
         </Link>
       </div>
     );
+    <Helmet>
+      <title>Stephen Chad Ethan — Full-Stack Engineer</title>
+        <meta
+          name="description"
+          content="project?.description"
+        />
+    </Helmet>
 
   return (
     <article className="max-w-4xl mx-auto px-4 py-16">

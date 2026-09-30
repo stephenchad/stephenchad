@@ -4,6 +4,8 @@ import remarkGfm from "remark-gfm";
 import useFetch from "../hooks/useFetch.js";
 import Spinner from "../components/ui/Spinner.jsx";
 
+import { Helmet } from "react-helmet-async";
+
 const formatDate = (d) =>
   d
     ? new Date(d).toLocaleDateString("en-US", {
@@ -33,6 +35,14 @@ export default function BlogPost() {
         </Link>
       </div>
     );
+
+  <Helmet>
+  <title>Stephen Chad Ethan — Full-Stack Engineer</title>
+  <meta
+    name="description"
+    content="post?.excerpt"
+  />
+</Helmet>
 
   return (
     <article className="max-w-3xl mx-auto px-4 py-16">

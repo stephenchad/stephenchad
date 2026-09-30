@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4f46e5"/>
+      <stop offset="1" stop-color="#6366f1"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#g)"/>
+  <text x="80" y="280" font-family="Inter, sans-serif" font-size="72"
+        font-weight="800" fill="white">Stephen Chad Ethan</text>
+  <text x="80" y="360" font-family="Inter, sans-serif" font-size="40"
+        fill="rgba(255,255,255,0.8)">Senior Software Engineer · Full-Stack Dev</text>
+  <text x="80" y="440" font-family="Inter, sans-serif" font-size="28"
+        fill="rgba(255,255,255,0.6)">stephenchad.dev</text>
+</svg>

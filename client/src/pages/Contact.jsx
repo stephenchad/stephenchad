@@ -1,6 +1,7 @@
 import { useState } from "react";
 import api from "../api/axios.js";
 import SectionHeading from "../components/ui/SectionHeading.jsx";
+import { Helmet } from "react-helmet-async";
 
 export default function Contact() {
   const [form, setForm] = useState({
@@ -39,7 +40,13 @@ export default function Contact() {
 
   const inputClass =
     "w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-shadow";
-
+  <Helmet>
+  <title>Stephen Chad Ethan — Full-Stack Engineer</title>
+  <meta
+    name="description"
+    content="Get in touch with Stephen Chad Ethan."
+  />
+</Helmet>
   return (
     <section className="max-w-6xl mx-auto px-4 py-16">
       <SectionHeading

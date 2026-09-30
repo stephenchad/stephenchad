@@ -1,4 +1,5 @@
 import SectionHeading from "../components/ui/SectionHeading.jsx";
+import { Helmet } from "react-helmet-async";
 
 const skillGroups = [
   {
@@ -44,6 +45,13 @@ const experience = [
 ];
 
 export default function About() {
+  <Helmet>
+  <title>Stephen Chad Ethan — Full-Stack Engineer</title>
+  <meta
+    name="description"
+    content="Senior Software Engineer. Skills, experience, and background."
+  />
+</Helmet>
   return (
     <>
       {/* INTRO */}
