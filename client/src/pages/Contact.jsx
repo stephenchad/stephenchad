@@ -70,3 +70,110 @@ export default function Contact() {
                   className="text-slate-600 hover:text-brand-600"
                 >
                   🐙 github.com/stephenchad
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://linkedin.com/in/stephenchad"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-slate-600 hover:text-brand-600"
+                >
+                  💼 linkedin.com/in/stephenchad
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div className="rounded-2xl bg-brand-50 border border-brand-100 p-6 text-sm text-brand-900">
+            <p className="font-semibold mb-2">Response time</p>
+            <p className="text-brand-800/80">
+              I usually reply within 24–48 hours. For urgent things, use email
+              directly.
+            </p>
+          </div>
+        </aside>
+
+        {/* Form */}
+        <form
+          onSubmit={onSubmit}
+          className="md:col-span-2 rounded-2xl border border-slate-200 p-6 md:p-8 space-y-5"
+        >
+          <div className="grid md:grid-cols-2 gap-5">
+            <div>
+              <label className="block text-sm font-medium text-slate-700 mb-1.5">
+                Name *
+              </label>
+              <input
+                required
+                name="name"
+                value={form.name}
+                onChange={onChange}
+                className={inputClass}
+              />
+            </div>
+            <div>
+              <label className="block text-sm font-medium text-slate-700 mb-1.5">
+                Email *
+              </label>
+              <input
+                required
+                type="email"
+                name="email"
+                value={form.email}
+                onChange={onChange}
+                className={inputClass}
+              />
+            </div>
+          </div>
+
+          <div>
+            <label className="block text-sm font-medium text-slate-700 mb-1.5">
+              Subject
+            </label>
+            <input
+              name="subject"
+              value={form.subject}
+              onChange={onChange}
+              className={inputClass}
+            />
+          </div>
+
+          <div>
+            <label className="block text-sm font-medium text-slate-700 mb-1.5">
+              Message *
+            </label>
+            <textarea
+              required
+              name="message"
+              rows={6}
+              value={form.message}
+              onChange={onChange}
+              className={`${inputClass} resize-y`}
+            />
+          </div>
+
+          {status.text && (
+            <div
+              className={`text-sm px-4 py-3 rounded-xl ${
+                status.type === "success"
+                  ? "bg-green-50 text-green-700 border border-green-200"
+                  : "bg-red-50 text-red-700 border border-red-200"
+              }`}
+            >
+              {status.text}
+            </div>
+          )}
+
+          <button
+            type="submit"
+            disabled={sending}
+            className="w-full md:w-auto px-7 py-3.5 rounded-xl bg-brand-600 text-white font-semibold hover:bg-brand-700 disabled:opacity-60 disabled:cursor-not-allowed transition-colors"
+          >
+            {sending ? "Sending..." : "Send message"}
+          </button>
+        </form>
+      </div>
+    </section>
+  );
+}
