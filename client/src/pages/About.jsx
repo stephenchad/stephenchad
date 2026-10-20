@@ -143,10 +143,10 @@ export default function About() {
             I'm open to senior full-stack roles and select freelance projects.
           </p>
           <a
-            href="mailto:stephen@stephenchad.dev"
+            href="mailto:stephethanchad@gmail.com"
             className="inline-block px-7 py-3.5 rounded-xl bg-white text-brand-700 font-semibold hover:bg-slate-100 transition-colors"
           >
-            stephen@stephenchad.dev
+            stephethanchad@gmail.com
           </a>
         </div>
       </section>
