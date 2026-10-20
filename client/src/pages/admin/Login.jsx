@@ -19,12 +19,16 @@ export default function Login() {
 
   const onSubmit = async (e) => {
     e.preventDefault();
+    console.log("[LOGIN DEBUG] Submit handler started");
+    
     setBusy(true);
     setError("");
     try {
+      console.log("[LOGIN DEBUG] Calling login function");
       await login(form.email, form.password);
       navigate(from, { replace: true });
     } catch (err) {
+      console.error("[LOGIN DEBUG] Login error:", err);
       setError(err.response?.data?.message || "Login failed");
     } finally {
       setBusy(false);
