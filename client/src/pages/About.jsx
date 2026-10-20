@@ -3,53 +3,63 @@ import { Helmet } from "react-helmet-async";
 
 const skillGroups = [
   {
-    title: "Frontend",
-    items: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Redux", "React Query"],
-  },
-  {
     title: "Backend",
-    items: ["Node.js", "Express", "REST APIs", "GraphQL", "JWT Auth", "WebSockets"],
+    items: ["Node.js", "TypeScript", "JavaScript", "Express", "NestJS", "REST APIs", "GraphQL", "WebSockets", "Microservices"],
   },
   {
-    title: "Database",
-    items: ["MongoDB", "PostgreSQL", "Redis", "Mongoose", "Prisma"],
+    title: "PAYMENTS AND SECURITY",
+    items: ["Paystack integration", "HMAC-SHA512 webhook verification", "idempotency", "double-entry ledger", "audit logging", "WebSockets"],
   },
   {
-    title: "DevOps & Tools",
-    items: ["Docker", "AWS", "GitHub Actions", "Vercel", "Render", "Linux"],
+    title: "Data & Messaging",
+    items: ["PostgreSQL", "MongoDB", "Redis", "Kafka", "SQL", "Database indexing", "row-level locking],
+  },
+  {
+    title: "Cloud & Delivery",
+    items: ["AWS EC2", "Lambda", "S3", "RDS", "Docker", "Kubernetes", "GitHub Actions", "Terraform", "CI/CD"],
+  },
+  {
+    title: "Engineering Practices",
+    items: ["System design", "TDD", "unit/integration/E2E testing", "code review", "observability", "mentoring", "agile delivery"],
   },
 ];
 
 const experience = [
   {
     role: "Senior Software Engineer",
-    company: "Freelance / Contract",
-    period: "2022 — Present",
+    company: "WestPay Global Resources",
+    period: "2024–Present",
     description:
-      "Design and deliver full-stack products for startups and scale-ups. Lead architecture decisions, mentor engineers, and ship fast without breaking things.",
+      "•	Architected and led delivery of an event-driven payments platform using Node.js, Kafka, and PostgreSQL, processing 1.2M+ transactions monthly at 99.95% uptime." 
+      "•	Reduced average API response time by 45% through query optimization, Redis caching, and database indexing; checkout success improved by 8%."
+      "•	Introduced CI/CD pipelines, automated testing, and infrastructure as code with GitHub Actions and Terraform, reducing deployment time from 2 hours to 15 minutes."
+      "•	Mentored 4 engineers, led weekly design reviews, and established code-quality standards associated with a 30% reduction in production incidents."
   },
   {
-    role: "Full-Stack Developer",
-    company: "Tech Company",
-    period: "2019 — 2022",
+    role: "Junior Software Engineer",
+    company: "ISM",
+    period: "2022–2024",
     description:
-      "Built and maintained customer-facing web apps serving thousands of users. Owned features end-to-end from DB schema to pixel-perfect UI.",
+      "•	Led a team of 5 engineers in decomposing a legacy monolith into AWS-hosted microservices, improving scalability and reducing infrastructure costs by 25%."
+      "•	Implemented role-based access control, audit logging, and OAuth 2.0 authentication to meet internal security and compliance requirements."
+      "•	Partnered on a real-time analytics platform serving 50K+ monthly users, backed by WebSockets and React dashboards."
   },
   {
     role: "Software Developer",
-    company: "Earlier roles",
-    period: "2017 — 2019",
+    company: "LTM",
+    period: "2018–2022",
     description:
-      "Started my career building web apps, learned the fundamentals, and fell in love with shipping products.",
+      "•	Built and maintained REST APIs and React features used by 10K+ customers; delivered 20+ features across 6 releases.",
+      "•	Raised unit and integration test coverage from 40% to 85%; promoted to Senior Engineer within 2 years."
   },
 ];
 
 export default function About() {
   <Helmet>
-  <title>Stephen Chad Ethan — Full-Stack Engineer</title>
+  <title>STEPHEN CHAD ETHAN — SENIOR BACKEND SOFTWARE ENGINEER | NODE.JS • TYPESCRIPT • PAYMENTS</title>
   <meta
     name="description"
-    content="Senior Software Engineer. Skills, experience, and background."
+    content="Senior Software Engineer. Skills, Experience, and Background."
   />
 </Helmet>
   return (
@@ -62,11 +72,12 @@ export default function About() {
         />
         <div className="space-y-4 text-slate-600 leading-relaxed text-lg">
           <p>
-            I'm <strong className="text-slate-900">Stephen Chad Ethan</strong>, a
-            Senior Software Engineer specializing in full-stack web development.
-            I've spent the last several years building products that people
-            actually use — from early-stage MVPs to production systems serving
-            thousands of users.
+            I'm <strong className="text-slate-900">STEPHEN CHAD ETHAN</strong>, SENIOR BACKEND SOFTWARE ENGINEER | NODE.JS • TYPESCRIPT • PAYMENTS.
+            I have 8+ years of experience building backend systems, APIs, payment platforms, and cloud-based services. 
+            Strong focus on Node.js, TypeScript, PostgreSQL, event-driven architecture, transaction integrity, 
+            API performance, automated testing, and delivery automation. 
+            Built payment workflows with concurrency-safe transfers, HMAC-verified webhooks, and idempotency; 
+            led a payments platform handling 1.2M+ transactions per month at 99.95% uptime.
           </p>
           <p>
             My sweet spot is the intersection of clean architecture and great
