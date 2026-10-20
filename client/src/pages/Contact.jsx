@@ -63,10 +63,10 @@ export default function Contact() {
             <ul className="space-y-3 text-sm">
               <li>
                 <a
-                  href="mailto:stephen@stephenchad.dev"
+                  href="mailto:stephethanchad@gmail.com"
                   className="text-slate-600 hover:text-brand-600"
                 >
-                  📧 stephen@stephenchad.dev
+                  📧 stephethanchad@gmail.com
                 </a>
               </li>
               <li>
@@ -76,17 +76,17 @@ export default function Contact() {
                   rel="noreferrer"
                   className="text-slate-600 hover:text-brand-600"
                 >
-                  🐙 github.com/stephenchad
+                  🐙 https://github.com/stephenchad
                 </a>
               </li>
               <li>
                 <a
-                  href="https://linkedin.com/in/stephenchad"
+                  href="https://www.linkedin.com/in/chad-stephen-a615a8215/"
                   target="_blank"
                   rel="noreferrer"
                   className="text-slate-600 hover:text-brand-600"
                 >
-                  💼 linkedin.com/in/stephenchad
+                  💼 https://www.linkedin.com/in/chad-stephen-a615a8215/
                 </a>
               </li>
             </ul>
